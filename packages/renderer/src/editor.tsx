@@ -24,12 +24,7 @@ const Editor: React.FC<Props> = props => {
     }
   }, [editorView])
 
-  return (
-    <div className="editorWrapper" ref={refContainer}>
-      {' '}
-      Editor{' '}
-    </div>
-  )
+  return <div className="editorWrapper" ref={refContainer}></div>
 }
 
 export default Editor
