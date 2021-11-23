@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from 'react'
 import { EditorState } from '@codemirror/state'
 import { EditorView, keymap, highlightActiveLine } from '@codemirror/view'
-import { defaultKeymap, transposeChars } from '@codemirror/commands'
+import { defaultKeymap } from '@codemirror/commands'
 import { history, historyKeymap } from '@codemirror/history'
 import { indentOnInput } from '@codemirror/language'
 import { bracketMatching } from '@codemirror/matchbrackets'
@@ -14,7 +14,6 @@ import {
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown'
 import { languages } from '@codemirror/language-data'
 import { oneDark } from '@codemirror/theme-one-dark'
-import { javascript } from '@codemirror/lang-javascript'
 
 export const transparentTheme = EditorView.theme({
   '&': {
