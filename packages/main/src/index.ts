@@ -13,7 +13,6 @@ if (!isSingleInstance) {
 
 app.disableHardwareAcceleration();
 
-// Install "Vue.js devtools"
 if (isDevelopment) {
   app.whenReady()
     .then(() => import('electron-devtools-installer'))
@@ -101,7 +100,7 @@ const createWindow = async () => {
       new Set<`https://${string}`>([ // Do not use insecure protocols like HTTP. https://www.electronjs.org/docs/latest/tutorial/security#1-only-load-secure-content
       'https://vitejs.dev',
       'https://github.com',
-      'https://v3.vuejs.org']);
+      ]);
     const { origin } = new URL(url);
     if (allowedOrigins.has(origin)){
       shell.openExternal(url);
